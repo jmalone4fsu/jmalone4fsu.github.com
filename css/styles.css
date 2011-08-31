@@ -1,0 +1,283 @@
+/* styles.css
+ Author: Joseph Malone            
+ Course: Visual Frameworks        
+ Term  : 1108 Instructor: C.Gibson 
+ Date  : August 25, 2011           
+
+ Description: Project 4 - one part of a mobile
+ web app which, when completed, will allow users to
+ build a custom to-do or shopping list.
+*/
+body {
+    width:460px;
+    background:black;
+    padding:10px;
+    display:block;
+    text-shadow:2px 1px 1px rgba(0,0,0,0.5);
+}
+/* applied linear gradient to the main background of form */
+fieldset {
+    background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
+    margin:10px 10px;
+    padding:10px 20px;
+    border:3px double black;
+    border-radius:20px;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.8);
+}
+/* styled background of h1 tag with linear gradient to match form background */ 
+h1{
+    font-family: UppenArmsNF, sans-serif;
+    font-size:40px;
+    color:peachpuff;
+    text-align:center;
+    text-shadow:3px 3px 1px rgba(0,0,0,0.8);
+    margin:10px;
+    border: 3px double black;
+    padding:10px;
+    border-radius:20px;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.8);
+    background: -webkit-linear-gradient(top, rgba(3,84,93,1) 0%,rgba(1,136,140,1) 40%,rgba(0,149,152,0.54) 50%,rgba(1,136,140,1) 60%,rgba(3,84,93,1) 100%);
+    
+}
+
+/* used text-shadow throughout to make text pop */
+h2{
+    font-family: HamburgerHeaven, sans-serif; /* embedded @font */ 
+    margin:0px 10px;
+    font-size:22px;line-height:2.0em;
+    color:peachpuff;
+    text-shadow:3px 3px 1px rgba(0,0,0,0.5);
+}
+h2.cyan {
+    color:cyan;
+    font-size: 20px;
+}
+fieldset.cyan {
+    font-family: UppenArmsNF, sans-serif;
+    border:3px double #8A0358;
+    font-size: 20px;
+    border-radius:5px;
+    color:cyan;
+    margin:0px 30px;
+    padding-left:10px;
+    text-shadow:3px 3px 1px rgba(0,0,0,0.5);
+    background: -webkit-linear-gradient(left, rgba(24,113,124,0) 0%,rgba(24,113,124,0.8) 15%,rgba(24,113,124,1) 19%,rgba(24,113,124,1) 20%,rgba(5,145,170,1) 50%,rgba(24,113,124,1) 80%,rgba(24,113,124,1) 81%,rgba(24,113,124,0.8) 85%,rgba(24,113,124,0) 100%);
+}
+h3 {
+    font-family: fantasy; /* embedded @font */ 
+    margin:0px 10px;
+    font-size:18px;line-height:1.6em;
+    color:peachpuff;
+    text-shadow:3px 3px 1px rgba(0,0,0,0.5);  
+}
+/* box-shadow throughout ands a nice drop shadow affect to elements.
+   used text-shadow:none to remove shadow on legend text */
+legend, p.joseppi {
+    font-family: DymaxionScript, fantasy, serif; /* embedded @font */
+    text-decoration:none;
+    color:darkcyan;
+    text-align:center;
+    border:4px groove teal;
+    background-color:#FFE4C4;
+    text-shadow:none;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+    padding:0px 10px;
+    font-weight:600;
+}
+legend.browse {
+    color:cyan;
+    background: black;
+    border:3px double #8A0358;
+    padding:0px 3px;
+    font-weight:300;
+}
+/* text-transform:capitalize to style the label text */ 
+label{
+    font-family: DymaxionScript, fantasy, serif; /* embedded @font */ 
+    font-size:20px;
+    line-height:1.0em;
+    font-weight:500;
+    text-transform:capitalize;
+    color:aqua;
+    text-shadow:2px 2px 1px rgba(0,0,0,1.2);
+}
+/* changes the background and styles onfocus */ 
+textarea{
+    background:lightcyan;
+    font-style:italic;
+    border:3px double cyan;
+    border-radius:4px;
+    resize:vertical;
+    overflow:auto;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+}
+textarea:focus{
+    background-color:cyan;
+    border:4px double white;
+}
+/* adds some styles to the select: drop boxes */ 
+select{
+    border:3px double cyan;
+    border-radius:6px;
+    background:lightcyan;
+}
+#clear {
+    display: none; margin: 15px;}
+    #clear p, #brows p {color:cyan;font-family: san-serif;
+    text-shadow:2px 2px 1px rgba(0,0,0,1.2);
+    text-transform:capitalize;
+    line-height: 0.7em;
+    background-color:teal;
+    border:1px dotted black;
+    padding:5px;margin:5px;
+}
+#list {
+    background-color:white;
+    border:3px double dashed white;
+}
+#brows {
+    margin-left:25px;
+    padding-left:20px;
+    border:3px dotted #8A0358;
+}
+/* changes colors of a: anchors according to state */ 
+a {
+    color:cyan;
+    margin:5px; padding:5px;
+}
+a:hover {
+    color:yellow;
+    letter-spacing:0.2em;
+}
+a:active {
+    color:white;
+} /* ---------------------------------------------------- */ 
+ul {
+    line-height:0.3em;
+}
+/* Extra-credit: list-style (I know I didn't go over this one in the video
+but I want you to try it out!)  */
+ul.a {
+    list-style-type:circle;
+    color:mediumspringgreen;display:block;
+}
+ul.b {
+    list-style-type:square;
+    color:hotpink;
+}
+/* styling for the input: fields - changes background color and style onfocus */
+input {
+    margin-bottom:10px;
+    border:3px double cyan;
+    border-radius:6px;
+    background:lightcyan;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+}
+input:focus {
+    background-color:cyan;
+    border:4px double white;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+}
+/* adds transition effects to the submit: button */ 
+#stf {
+    background-color:lightcyan;
+    -webkit-transition-property:all;
+    -webkit-transition-duration: 2s;   
+}
+#stf:hover {
+    background-color:aqua;
+    color:darkred;
+    font-weight: bold;
+    border:4px groove white;
+}
+/* Embedded fonts are meant to be installed on the server side so the user sees the
+correct font regardless of them having it on thier own machine. These font files
+are included in the project folder and must be installed on your machine to mimic
+being installed server side. These fonts are SIL Open Font License and freely
+available. */
+@font-face {
+    font-family: "UppenArmsNF";
+    src: url(".../fonts/UppenArmsNF.ttf")format('truetype');
+}
+@font-face {
+    font-family: "HamburgerHeaven";
+    src: url(".../fonts/HamburgerHeaven.suit")format('truetype');
+}
+@font-face {
+    font-family: "DymaxionScript";
+    src: url(".../fonts/DymaxionScript.suit")format('truetype');
+}/* ------------------------------------------------------------------- */
+/* styles the display counter for the select: slider */
+span {
+    background-color:white;
+    color:black;
+    margin:10px;padding:5px 10px;
+    border: 4px groove cyan;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+    text-shadow:none;border-radius:20px;
+}
+span.err {
+    background-color:red;
+    color:white;
+    margin-left:15px;
+    border: 1px solid white;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.5);
+    text-shadow:none;
+}
+p {
+    font-family: UppenArmsNF, fantasy;
+    font-size: 20px; color: white;
+}
+#wow { margin:5px; padding:10px;}
+#wow p {
+    background: #FFE4C4;
+    margin:5px;
+    padding:10px;
+    border:3px double black;
+    border-radius:20px;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.8);
+}
+input.a, input.b {
+    background-color:lightcyan;
+    -webkit-transition-property:all;
+    -webkit-transition-duration: 2s;   
+}
+input.a:hover, input.b:hover {
+    background-color:aqua;
+    color:darkred;
+    font-weight: bold;
+    border:4px groove white;
+}
+input.b {
+    padding:5px;
+    border-radius:20px;
+}
+#distpic1 {
+    display: none;}
+    #distpic2 {display:none;}
+    #distpic3 {display:none;}
+img.centred {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+a.yo{
+    background: url(../img/addinv3.png) no-repeat 0 0;
+    margin-left:30px; margin-bottom:0px;
+    width: 390px;
+    height:100px;
+    display:block;
+    text-indent: -9999px;
+}
+a.yo:hover {
+    background-position: -400px 0;
+}
+td {
+    color: cyan;
+    padding:4px;padding-bottom:0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dotted aqua;
+}
+
+
