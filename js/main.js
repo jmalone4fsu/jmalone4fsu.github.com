@@ -1,12 +1,8 @@
 /* main.js
  Author: Joseph Malone            
- Course: Visual Frameworks        
- Term  : 1108 Instructor: C.Gibson 
- Date  : August 25, 2011           
-
- Description: Project 4 - one part of a mobile
- web app which, when completed, will allow users to
- build a custom to-do or shopping list.
+ Course: Mobile Interfaces and Usability        
+ Term  : 1109 Instructor: C.Burke 
+ Date  : September 01, 2011           
 */
 
 window.onload = addNewItem(), addNewPackage();
@@ -25,7 +21,7 @@ var img5 = new Image().src = "img/bravo300.png";
 function addNewItem(){
     var newItemtxt;
     var newItem;
-    var distName = ["USFoods","BestMeats","Condiments"];
+    var distName = ["BestMeats","USFoods","Condiments","BoxRite","BravoCheese"];
     var getItem = document.getElementById("dist");
     for (var i=0, j=distName.length; i<j; i++){
         newItem = document.createElement("option");
@@ -132,6 +128,10 @@ function getItems(){
             distImg = img2;
         }else if (dist2=="Condiments"){
             distImg = img3;
+        }else if (dist2=="BoxRite"){
+            distImg = img4;
+        }else if (dist2=="BravoCheese"){
+            distImg = img5;
         }
         var item="Item : " + value[1];
         var quantity="Quantity : " + value[2] + " " + value[3];
@@ -159,6 +159,7 @@ function getItems(){
                 var newP=document.createElement("p");
                 var newPp=document.createElement("p");
                 var t = document.createElement("IMG");
+                t.setAttribute('class', "centred");
                 t.setAttribute('src', distImg);
                 t.setAttribute('width', 300);
                 newPp.appendChild(t);
