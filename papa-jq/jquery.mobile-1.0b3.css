@@ -255,7 +255,7 @@
 	color: 					black;
 	font-weight: bold;
 	text-shadow: 0 1px 1px 	#FBFB09;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#b80202), to(#fff), to(#2DB625)); /* Saf4+, Chrome */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b80202), color-stop(50%,white), to(#2DB625)); /* Saf4+, Chrome */
 	background-image: -webkit-linear-gradient(top, #b80202, #fff, #2DB625); /* Chrome 10+, Saf5.1+ */
 	background-image:    -moz-linear-gradient(top, #b80202, #fff, #2DB625); /* FF3.6 */
 	background-image:     -ms-linear-gradient(top, #b80202, #fff, #2DB625); /* IE10 */
