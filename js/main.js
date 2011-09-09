@@ -29,11 +29,11 @@ $(document).ready(function() {
         }
     }
     for (var i=0, j=4; i<j; i++){
-        var testdata1="<li class='hud'>"+json.orders.BM.item[i]+" "+json.orders.BM.qty[i]+" "+json.orders.BM.orddate[i]+"</li>";
+        var testdata1="<li>"+json.orders.BM.item[i]+" "+json.orders.BM.qty[i]+" "+json.orders.BM.orddate[i]+"</li>";
         var testdata2="<li>"+json.orders.US.item[i]+" "+json.orders.US.qty[i]+" "+json.orders.US.orddate[i]+"</li>";
-        var testdata3="<p>"+json.orders.Con.item[i]+"</p>";
-        var testdata4="<p>"+json.orders.BR.item[i]+"</p>";
-        var testdata5="<tr><td width=150><li>"+json.orders.BC.item[i]+"</td>"+"<td width=100>" +json.orders.BC.qty[i]+"  "+"</td>"+ "  "+"<td>" +json.orders.BC.orddate[i]+"</li></td></tr>";
+        var testdata3="<li>"+json.orders.Con.item[i]+" "+json.orders.Con.qty[i]+" "+json.orders.Con.orddate[i]+"</li>";
+        var testdata4="<li>"+json.orders.BR.item[i]+" "+json.orders.BR.qty[i]+" "+json.orders.BR.orddate[i]+"</li>";
+        var testdata5="<li>"+json.orders.BC.item[i]+" "+json.orders.BC.qty[i]+" "+json.orders.BC.orddate[i]+"</li>";
         $('#BM').append(testdata1);
         $('#USF').append(testdata2);
         $('#Con').append(testdata3);
