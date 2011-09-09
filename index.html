@@ -12,14 +12,14 @@
     <!--Mobile IE needs cleartype for smoothing fonts-->
     <meta http-equiv="cleartype" content="on">
     <!--Stylesheets here-->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" type="text/css">
+    <link rel="stylesheet" href="papa-jq/jquery.mobile-1.0b3.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
     <div data-role="page" id="home" data-theme="e">
-        <div data-role="header" data-position="fixed">
+        <div data-role="header" data-position="fixed" data-theme="c">
             <h1>Welcome to Morgia's Pizzeria</h1>
         </div>
         <div data-role="content">
@@ -29,21 +29,21 @@
             </ul>
         
             <p><a href="#hull2" data-role="button" data-icon="arrow-r"
-            data-iconpos="right" data-theme="a">Add Inventory</a></p>
+            data-iconpos="right" data-theme="c">Add Inventory</a></p>
             <p><a href="#browse" data-role="button" data-icon="arrow-r"
-            data-iconpos="right" data-theme="b">Browse by Distributor</a></p>
+            data-iconpos="right" data-theme="e">Browse by Distributor</a></p>
             <p><a href="#cust" data-role="button" data-icon="arrow-r"
-            data-iconpos="right" data-theme="a">Customer List</a></p>
+            data-iconpos="right" data-theme="c">Customer List</a></p>
 
         </div>
-        <div data-role="footer" data-position="fixed">
+        <div data-role="footer" data-position="fixed" data-theme="c">
             <center><p>&copy; 2011 - JMalone - All rights reserved</p></center>
         </div>
     </div>
     <div data-role="page" id="browse" data-theme="e">
-        <div data-role="header" data-position="fixed">
+        <div data-role="header" data-position="fixed" data-theme="f">
             <h1>Browse by Distributor</h1>
-            <a href="#" data-rel="back" data-icon="arrow-l" class="ui-btn-left" data-theme="b">Back</a>
+            <a href="#" data-rel="back" data-icon="home" class="ui-btn-left" data-theme="c">Home</a>
         </div>
         <div data-role="content">
 
@@ -52,31 +52,31 @@
             </ul>
             
             <div data-role="collapsible-set">
-                <div data-role="collapsible" data-collapsed="true" data-theme="b">
+                <div data-role="collapsible" data-collapsed="true" data-theme="c">
                     <h3>Best Meats</h3>
                     <ul id="BM" data-role="listview" data-inset="true" data-theme="a">
                         <center><img src="img/bestmeats300.png"></center>
                     </ul>
                 </div>
-                <div data-role="collapsible" data-collapsed="true" data-theme="b">
+                <div data-role="collapsible" data-collapsed="true" data-theme="e">
                     <h3>US Foods</h3>
                     <ul id="USF" data-role="listview" data-inset="true" data-theme="a">
                         <center><img src="img/usfoods300.png"></center>
                     </ul>
                 </div>
-                <div data-role="collapsible" data-collapsed="true" data-theme="b">
+                <div data-role="collapsible" data-collapsed="true" data-theme="c">
                     <h3>Condiments</h3>
                     <ul id="Con" data-role="listview" data-inset="true" data-theme="a">
                         <center><img src="img/condiments300.png"></center>
                     </ul>
                 </div>
-                <div data-role="collapsible" data-collapsed="true" data-theme="b">
+                <div data-role="collapsible" data-collapsed="true" data-theme="e">
                     <h3>Box Rite</h3>
                     <ul id="BR" data-role="listview" data-inset="true" data-theme="a">
                         <center><img src="img/boxrite300.png"></center>
                     </ul>
                 </div>
-                <div data-role="collapsible" data-collapsed="true" data-theme="b">
+                <div data-role="collapsible" data-collapsed="true" data-theme="c">
                     <h3>Bravo Cheese</h3>
                     <ul id="BC" data-role="listview" data-inset="true" data-theme="a">
                         <center><img src="img/bravo300.png"></center>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div data-role="footer" data-position="fixed">
+        <div data-role="footer" data-position="fixed" data-theme="f">
             <center><p>&copy; 2011 - JMalone - All rights reserved</p></center>
         </div>
     </div>
@@ -117,9 +117,10 @@
         </div>
     </div>
         
-    <div data-role="page" id="cust" data-add-back-btn="true" data-theme="e" >
-        <div data-role="header" data-position="fixed">
+    <div data-role="page" id="cust" data-theme="e" >
+        <div data-role="header" data-position="fixed" data-theme="f">
             <h1>Customer List</h1>
+            <a href="#" data-rel="back" data-icon="home" class="ui-btn-left" data-theme="c">Home</a>
         </div>
         <div data-role="content">
             <ul data-role="listview" data-inset="true" data-filter="true" data-filter-theme="e" data-filter-placeholder="Find Customer">
@@ -129,8 +130,7 @@
         <div>
             <ul id="custList" data-role="listview" data-inset="true">
         </div>
-        <a href="#home" data-role="button" data-theme="b">Home</a>
-        <div data-role="footer" data-position="fixed">
+        <div data-role="footer" data-position="fixed" data-theme="f">
             <center><p>&copy; 2011 - JMalone - All rights reserved</p></center>
         </div>
     </div>            
