@@ -11,21 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Mobile IE needs cleartype for smoothing fonts-->
     <meta http-equiv="cleartype" content="on">
-    <!--Stylesheets here-->
-    <script src="https://www.google.com/jsapi?key="ABQIAAAAoSFiLdk3dg-VxyVCTxKIhhRai92jYkDYHB-MrwaqfRL_R2NAThTsVg0yppON-eOwkXRhmkFMBHgJbA" type="text/javascript"><!--mce:0--></script>
-    
-    <script src="http://code.jquery.com/jquery-1.6.2.min.js" type="text/javascript"></script>
-    <script src="dnews/dnews.js" type="text/javascript"></script>
+    <!--Stylesheets here-->   
     <link rel="stylesheet" href="papa-jq/jquery.mobile-1.0b3.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="dnews/dnews.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript">
-
-        google.load("feed", "1");
-        $(document).ready(function(){
-            $('#dnews').dnews({ feedurl: 'rss1.smashingmagazine.com/feed/', showdetail: true, controlsalwaysvisible: true, entries:10, controls:true});
-        });
-    </script>
 </head>
 
 <body>
@@ -33,11 +21,6 @@
         <div data-role="header" data-position="fixed" data-theme="c">
             <p align=center>Welcome to Morgia's Pizzeria</p>
         </div>
-        <!-- This is my PMQ news feed -->
-        <div data-role="content" id="dnews" class="news-wrapper">
-            <div class="news"></div>
-        </div>
-        <!-- end of news feed -->
         <div data-role="content">
             <ul data-role="listview" data-inset="true" data-filter="true" data-filter-theme="e" data-filter-placeholder="Search">
                 <p align=center><img src="img/title.png" width=90%></p>
@@ -53,7 +36,13 @@
 
         </div>
         <div data-role="footer" data-position="fixed" data-theme="c">
-            <center><p>&copy; 2011 - JMalone - All rights reserved</p></center>
+            <ul id="ticker01"> <!-- news ticker -->
+                <li><span>Weekly Special:</span><a href="#">1/2 Price Slice</a></li>
+                <li><span>Monthly Special:</span><a href="#">$5 Medium Stromboli</a></li>
+                <li><span>Lunch Special:</span><a href="#">$1 Off Grande Fries</a></li>
+                <li>&copy; 2011 - JMalone - All rights reserved.</li>
+                <!-- can add more here -->
+            </ul> <!-- end of ticker -->
         </div>
     </div>
     <div data-role="page" id="browse" data-theme="e">
@@ -160,8 +149,15 @@
     <!--Javascript normally at bottom except for Modernizr-->
     <script src="js/libs/modernizr.custom.20800.js"></script>
     <script src="js/main.js"></script>
- <!--   <script type="text/javascript">-->
-
+    <script src="js/jquery.li-scroller.1.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("ul#ticker01").liScroll();
+        });
+        $(function(){
+            $("ul#ticker02").liScroll({travelocity: 0.30});
+        });
+    </script>
     <script id="custTemplate" type="text/x-jquery-tmpl">
         <li>
             {{html Pic}}
