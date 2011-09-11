@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-
+<!--------------------------------------->
+<!-- index.html
+ Author: Joseph Malone            
+ Course: Mobile Interfaces and Usability
+ Term  : 1109 Instructor: C.Burke
+ Date  : September 08, 2011           
+ ---------------------------------------->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -18,16 +24,18 @@
 </head>
 
 <body>
+    <!-- Morgia's Home Page -->
     <div data-role="page" id="home" data-theme="e">
         <div data-role="header" data-position="fixed" data-theme="c">
             <p align=center>Welcome to Morgia's Pizzeria</p>
         </div>
+        <!-- Company Branding -->
         <div data-role="content">
             <ul data-role="listview" data-inset="true">
                 <p align=center><img src="img/title.png" width=90%></p>
                 <p align=center><img src="img/special1.gif" width=90%></p>
             </ul>
-        
+            <!-- main page nav buttons -->        
             <p><a href="#hull2" data-role="button" data-icon="arrow-r"
             data-iconpos="right" data-theme="c">Add Inventory</a></p>
             <p><a href="#browse" data-role="button" data-icon="arrow-r"
@@ -36,6 +44,7 @@
             data-iconpos="right" data-theme="c">Customer List</a></p>
 
         </div>
+        <!-- footer showing specials in a news ticker -->
         <div data-role="footer" data-position="fixed" data-theme="c">
             <ul id="ticker01"> <!-- news ticker -->
                 <li><span>Weekly Special:</span><a href="#">1/2 Price Slice</a></li>
@@ -47,6 +56,7 @@
             </ul> <!-- end of ticker -->
         </div>
     </div>
+    <!-- Browse by Distributor section -->
     <div data-role="page" id="browse" data-theme="e">
         <div data-role="header" data-position="fixed" data-theme="f">
             <h1>Browse Dist</h1>
@@ -94,7 +104,8 @@
         <div data-role="footer" data-position="fixed" data-theme="f">
             <center><p>&copy; 2011 - JMalone - All rights reserved</p></center>
         </div>
-    </div>
+    </div><!-- end of browse by distributor section -->
+    <!-- Start of Add Inventory page -->
     <div data-role="page" id="hull2" data-add-back-btn="true">
         <div data-role="header" data-position="fixed">
             <h1>Under Construction</h1>
@@ -122,7 +133,10 @@
             <center><p>&copy; 2011 - JMalone - All rights reserved</p></center>
         </div>
         </div>
-    </div>
+    </div><!-- End Add Inventory page -->
+    <!-- Start Customer List page
+    ** List is populated using json data and jquery-tmpl plugin but
+    ** will be using localStorage in the future to populate list. -->
         
     <div data-role="page" id="cust" data-theme="e" >
         <div data-role="header" data-position="fixed" data-theme="f">
@@ -140,23 +154,24 @@
         <div data-role="footer" data-position="fixed" data-theme="f">
             <center><p>&copy; 2011 - JMalone - All rights reserved</p></center>
         </div>
-    </div>            
+    </div><!-- End of Customer List page -->              
 
     
     <!-- Javascript here -->
     <script src="http://code.jquery.com/jquery-1.6.2.min.js" type="text/javascript"></script>
     <script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js" type="text/javascript"></script>
+    <!-- jquery templates plugin -->
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-
-    <!--Javascript normally at bottom except for Modernizr-->
     <script src="js/libs/modernizr.custom.20800.js"></script>
     <script src="js/main.js"></script>
+    <!-- use li-scoller jq plugin to make ticker for main page footer -->
     <script src="js/jquery.li-scroller.1.0.js"></script>
     <script type="text/javascript">
         $(function(){
             $("ul#ticker01").liScroll({travelocity: 0.10});
         });
-    </script>
+    </script><!-- end of ticker code -->
+    <!-- setup jquery-tmpl for use with data to populate Customer List -->
     <script id="custTemplate" type="text/x-jquery-tmpl">
         <li>
             {{html Pic}}
@@ -166,7 +181,8 @@
             <p><em>Last Order:</em> ${Ord}</p>
             <h1 class="ui-li-aside">${Price}</h1>
         </li>
-    </script>
+    </script><!-- end of jquery-tmpl definition -->
+    <!-- json data -->
     <script type="text/javascript">
         var customer = [
             { Name: "Joseph Malone", Addr: "334 Sycamore Heights", Phone: "(423) 525-7380", Pic: "<img src='img/XchPep80.jpg'>", Ord: "Lg Pepperoni with X-Cheese", Price: "14.90"},
@@ -183,7 +199,7 @@
         ];
         
         $( "#custTemplate" ).tmpl( customer ).appendTo( "#custList" );
-    </script>
+    </script><!-- use template with customer data and append to customer list -->
     
 
 </body>
