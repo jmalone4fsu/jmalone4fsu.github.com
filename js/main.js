@@ -41,5 +41,55 @@ $(document).ready(function() {
         $('#BC').append(testdata5);
     }
 });
+var storeInvForm = function(data){
+    // uses form data here;
+    var mydata = data;
+    var d = new Date();
+    var key= (d.getTime());
+    var dist = mydata[0].value;
+    var item = mydata[1].value;
+    var quantity = mydata[2].value;
+    var amount = mydata[4].value;
+    var ordered = mydata[3].value;
+
+    var orderdate = mydata[5].value;
+    var note = mydata[6].value;
+    var totqty = quantity+ " " +amount;
+    var allItems = [
+        dist,
+        item,
+        totqty,
+        ordered,
+        orderdate,
+        note
+    ];
+    $.jStorage.set(key, allItems);
+    alert("stored "+key+ " "+allItems);
+    //
+    //alert(mydata[0].name+" "+mydata[0].value+" "+mydata.length)
+    //;
+};
+$(document).ready(function(){
+    var invform=$('#addinvform'),
+        formerrors = $('#formerrors');
+    
+    invform.validate({
+        invalidHandler: function(form, validator){
+            formerrors.click();
+            var html = '';
+            for (var key in validator.submitted){
+                var label=$('label[for^="'+key+'"]')
+                var legend=label.closest('fieldset').find('.ui-controlgroup-label');
+                var fieldname = legend.length ? legend.text() : label.text();
+                html += '<li>' + fieldname +'</li>';
+            };
+            $("#myformerrors ul").html(html);
+        },
+        submitHandler: function(){
+            var data = invform.serializeArray();
+            storeInvForm(data);
+        }
+    });
+});
 
 
