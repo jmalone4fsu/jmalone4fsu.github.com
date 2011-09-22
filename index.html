@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!--------------------------------------->
-<!-- index.html
+<!-- index.html(right)
  Author: Joseph Malone            
  Course: Mobile Interfaces and Usability
  Term  : 1109 Instructor: C.Burke
- Date  : September 15, 2011           
+ Date  : September 22, 2011           
  ---------------------------------------->
 <html lang="en">
 <head>
@@ -19,20 +19,27 @@
     <meta http-equiv="cleartype" content="on">
     <!--Stylesheets here-->
     <style>
-	body { font: 14px/24px 'Helvetica Neue', Arial, sans-serif; color: #333; width: 420px; margin: 30px auto 60px; background: #faeb9e }
+	body { font: 14px/24px 'Helvetica Neue', Arial, sans-serif; color: #333; width: 420px; margin: 30px auto 60px}
 	body > h2 {font: 20px 'Helvetica Neue', Arial, sans-serif; margin: 30px 0 15px; text-shadow: 1px 1px 0 white; border-bottom: 2px solid #333; padding-bottom: 5px }
         body > div p.special {margin:5px}
         ul > h2.recent {text-align:left; margin: 1px 1px 1px; padding:1px; color:green}
         li > h2 {font: 16px 'Helvetica Neue', Arial, sans-serif; margin: 30px 0 15px; text-shadow: 1px 1px 0 red; border-bottom: 2px solid #333; padding-bottom: 5px }
-	ul > h2,h3[align="center"] {color:black}
-        li > div.purple {margin:1px }
+	ul > h2,h3[align="center"] {color:firebrick; text-shadow: 1px 1px 2px black}
+        li > div.purple {margin:1px}
+        div > h3 {color:firebrick; text-shadow: 1px 1px 0px black}
         ul.recent {border: 2px dotted red; align:left; margin:-6px 20px 0px -20px}
-        ul > h5 {text-align:left; color:purple; margin:1px 1px 7px 1px; padding:1px}
-        h1 { text-align: center; margin-bottom: 30px; text-shadow: 1px 1px 0 white }
+        ul > h5 {text-align:left; color:orange; text-shadow:1px 1px 0px black; margin:1px 1px 7px 1px; padding:1px}
+        h1 { text-align: center; margin-bottom: 30px; text-shadow: 1px 1px 1px black}
 	dt { font-weight: bold }
 	dd { margin: 0 }
-        label {color:black}
-        .ui-controlgroup-label {color:black}
+        a.dim:link {color:orange; text-shadow: 1px 1px 0px black}
+        a.dim:active {color:orange; text-shadow: 1px 1px 0px black}
+        a.dim:visited {color:orange; text-shadow: 1px 1px 0px black}
+        a.dim:hover {color:white; text-shadow: 1px 1px 0px black}
+        label {color:firebrick; text-shadow: 1px 1px 1px black}
+        p.tint > img {opacity:0.7;}
+        div.ui-header {color:orange;text-shadow: 1px 1px 1px black}
+        .ui-controlgroup-label {color:firebrick; text-shadow: 1px 1px 1px black}
 	figure { display: block; width: 100%; height: 100%; margin: 0 }
 	figcaption { padding: 10px 15px; position: absolute; bottom: 20px; right: 30px; z-index: 3; background: black; background: rgba(0,0,0,0.7); color: white;
 	    -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px }
@@ -43,18 +50,17 @@
     <link rel="stylesheet" href="css/jquery.mobile.datebox.css" type="text/css">
     <link rel="stylesheet" href="css/li-scroller.css">
     <link rel="stylesheet" href="css/liteaccordion.css">
-    <link rel="stylesheet" href="css/jquery.clearableTextField.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div data-role="page" id="home" data-theme="e">
-        <div data-role="header" data-position="fixed" data-theme="c">
+        <div data-role="header" data-position="fixed" data-theme="f">
             <h1>Welcome to Morgia's Pizzeria</h1>
         </div>
         <div data-role="content" align="center">
             <ul data-role="listview" data-inset="true">
-                <p align=center><img src="img/title.png" width=360></p>
+                <p class="tint" align=center><img src="img/title.png" width=75%></p>
             </ul>
             <!--    <p align=center><img src="img/special1.gif" width=360></p> -->
             <ul data-role="listview" data-inset="true">    
@@ -100,12 +106,12 @@
             </ul>
         
             <p><a href="#addinventory" data-role="button" data-icon="arrow-r"
-            data-iconpos="right" data-theme="c">Add Inventory</a></p>
+            data-iconpos="right" data-theme="c" data-transition="flip">Add Inventory</a></p>
             <p><a href="#browse" data-role="button" data-icon="arrow-r"
-            data-iconpos="right" data-theme="e">Browse by Distributor</a></p>
+            data-iconpos="right" data-theme="e" data-transition="flip">Browse by Distributor</a></p>
             <p><a href="#cust" data-role="button" data-icon="arrow-r"
-            data-iconpos="right" data-theme="c">Customer List</a></p>
-            <p><a href="../Project2-wrong/index.html" target="_self">Open Wrong Version</a></p>
+            data-iconpos="right" data-theme="c" data-transition="flip">Customer List</a></p>
+            <p><a href="../Project4-wrong/index.html" target="_self" class="dim">Open Wrong Version</a></p>
 
         </div>
         <div data-role="footer" data-position="fixed" data-theme="c">
@@ -127,7 +133,7 @@
         <div data-role="content">
 
             <ul data-role="listview" data-inset="true">
-                <p align=center><img src="img/title.png" width=90%></p>
+                <p class="tint" align=center><img src="img/title.png" width=60%></p>
             </ul>
             
             <div data-role="collapsible-set">
@@ -179,7 +185,7 @@ Add Inventory Form Starts Here
         </div>
         <div data-role="content">
             <ul data-role="listview" data-inset="true">
-                <p align=center><img src="img/title.png" width=50%></p>
+                <p class="tint" align=center><img src="img/title.png" width=50%></p>
             </ul>
             <form action="#" method="post" id="addinvform">
 
@@ -245,7 +251,7 @@ Add Inventory Form Starts Here
                     </center>
                 </div>
                 <input type="submit" value="Add Inventory Item" data-icon="check" data-iconpos="right" data-theme="g">
-                <a href="#myformerrors" id="formerrors" data-rel="dialog" data-transition="pop">Open Errors</a>
+                <a href="#myformerrors" id="formerrors" data-rel="dialog" data-transition="flip">Open Errors</a>
             </form>
         </div>
         <div data-role="footer" data-position="fixed" data-theme="f">
@@ -258,8 +264,8 @@ Add Inventory Form Starts Here
             <a href="#" data-rel="back" data-icon="home" class="ui-btn-left" data-theme="c">Home</a>
         </div>
         <div data-role="content">
-            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-theme="e" data-filter-placeholder="Find Customer">
-                <p align=center><img src="img/title.png" width=90%></p>
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-theme="f" data-filter-placeholder="Find Customer">
+                <p class="tint" align=center><img src="img/title.png" width=50%></p>
             </ul>
         </div>
         <div>
@@ -293,7 +299,6 @@ Add Inventory Form Starts Here
     <script src="js/liteaccordion.jquery.js"></script>
     <script src="js/jquery.slidinglabels.js"></script>
     <script src="js/jstorage.js"></script>
-    <script src="js/jquery.clearableTextField.css"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
         $(function(){
@@ -330,6 +335,7 @@ Add Inventory Form Starts Here
         $( "#recentOrders" ).tmpl( customer).appendTo( "#recent");
         $( "#custTemplate" ).tmpl( customer ).appendTo( "#custList" );
         $('#three').liteAccordion({ theme : 'italy',enumerate:true,rounded:true, containerWidth :390, autoplay:false,containerHeight :300, headerWidth:24, slideSpeed : 600, firstSlide : 1 });
+
     </script>
     <script type="text/javascript">
     $(function(){
@@ -347,7 +353,5 @@ Add Inventory Form Starts Here
 
     });
     </script>
-    
-
 </body>
 </html>

@@ -38,21 +38,21 @@
 .rounded li > h2 span { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 
 /***************************************** Italy */
-.italy { border: 4px dotted black; border-bottom-width: 4px; padding:1px; background: white; -webkit-box-shadow: 0 1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4); -o-box-shadow: 0 -1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4); 
+.italy { border: 4px dotted firebrick;border-bottom-width: 4px; padding:1px; background: black; -webkit-box-shadow: 0 1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4); -o-box-shadow: 0 -1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4); 
 	box-shadow: 0 -1px 0 #5b5b5b inset, 0 5px 15px rgba(0, 0, 0, 0.4); }
 .italy li > h2 { background: #030303; font-size: 16px; line-height: 1.3em; text-shadow: 0 -1px 0 #030303; }
 .italy li > h2 span { background: firebrick; color:#FFF8C6;}
 .italy li > h2 b { background: #353535\9; color: #FDEEF4; font-size: 20px; text-shadow: -1px 1px 0 #5b5b5b; }
 .italy h2.selected span, .dark h2.selected span:hover { background: green; }
 .italy h2.selected b { background: green;}
-.italy h2 span.white {background:white; color:grey;}
-.italy h2 span.red {background:firebrick;}
-.italy h2 span.green {background:green;}
-.italy h2 span.recent {background:#faeb9e; color:grey;}
-.italy h2.selected span.green {border: 4px double white;}
-.italy h2.selected span.white {border: 4px double black;}
-.italy h2.selected span.red {border: 4px double white;}
-.italy h2.selected span.recent {border: 4px double white; }
-.italy li > div { background: white; margin-left: 5px; margin-top: 10px;}
+.italy h2 span.white {background:white; color:grey; opacity: 0.5;}
+.italy h2 span.red {background:firebrick; color:black; opacity: 0.5;}
+.italy h2 span.green {background:green; color: #faeb9e; opacity: 0.5;}
+.italy h2 span.recent {background:#faeb9e; color:grey; opacity: 0.5;}
+.italy h2.selected span.green {border: 4px double white;opacity:0.8;}
+.italy h2.selected span.white {border: 4px double black; opacity:0.8;}
+.italy h2.selected span.red {border: 4px double white; opacity:0.7;}
+.italy h2.selected span.recent {border: 4px double white; opacity:0.8;}
+.italy li > div { background: url(../img/red.png), url(../img/wall.png); margin-left: 5px; margin-top: 4px;padding:10px;}
 .italy li > div p {color:green; font-size: 18px; font-weight: 400; text-shadow: 1px 2px 0 lightgray;}
 /**************************************** Stitch */
