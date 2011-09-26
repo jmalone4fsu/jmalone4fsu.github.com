@@ -513,12 +513,13 @@
 	font-weight: bold;
 	color: 					white;
 	text-shadow: 1px 1px 1px 	black;
-	background-image:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,219,78,1)), color-stop(41%,rgba(89,12,0,1)), color-stop(100%,rgba(153,55,3,1)));
-	background-image: -webkit-linear-gradient(top, rgba(250,219,78,1) 0%,rgba(89,12,0,1) 41%,rgba(153,55,3,1) 100%); 
-	background-image:    -moz-linear-gradient(top, #fadb4e, #F78342); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, #fadb4e, #F78342); /* IE10 */
-	background-image:      -o-linear-gradient(top, #fadb4e, #F78342); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, #fadb4e, #F78342);
+background: rgb(250,219,78);
+background: -moz-linear-gradient(top, rgba(250,219,78,1) 0%, rgba(89,12,0,1) 41%, rgba(153,55,3,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,219,78,1)), color-stop(41%,rgba(89,12,0,1)), color-stop(100%,rgba(153,55,3,1)));
+background: -webkit-linear-gradient(top, rgba(250,219,78,1) 0%,rgba(89,12,0,1) 41%,rgba(153,55,3,1) 100%);
+background: -o-linear-gradient(top, rgba(250,219,78,1) 0%,rgba(89,12,0,1) 41%,rgba(153,55,3,1) 100%);
+background: -ms-linear-gradient(top, rgba(250,219,78,1) 0%,rgba(89,12,0,1) 41%,rgba(153,55,3,1) 100%);
+background: linear-gradient(top, rgba(250,219,78,1) 0%,rgba(89,12,0,1) 41%,rgba(153,55,3,1) 100%);
 }
 .ui-btn-up-e a.ui-link-inherit {
 	color: 					#333;
