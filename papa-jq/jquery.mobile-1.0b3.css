@@ -488,14 +488,8 @@
 	border: 3px double 		#FEA343;
 	color: 			    red;
 	text-shadow: 0 1px 0 	#fff;
-	background: url(../img/red.png), url(../img/wall.png), url(../img/red.png);
+	background: url(../img/wall.png)
         /* #FEE886; */
-        
-       
-	background-image: -webkit-linear-gradient(left, rgba(112,2,9,1) 0%,rgba(249,2,31,0.51) 100%);
-        background-image:  -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(112,2,9,1)), color-stop(100%,rgba(249,2,31,0.51)));
-        background-image: linear-gradient(left, rgba(112,2,9,1) 0%,rgba(249,2,31,0.51) 100%);
-
 
 }
 .ui-body-e,
