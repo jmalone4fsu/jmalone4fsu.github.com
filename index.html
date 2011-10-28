@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!--------------------------------------->
-<!-- index.html(right)
+<!-- index.html
  Author: Joseph Malone            
- Course: Mobile Interfaces and Usability
- Term  : 1109 Instructor: C.Burke
- Date  : September 22, 2011           
+ Course: Advanced SDI
+ Term  : 1111 Instructor: Rick Osborne
+ Date  : October 26, 2011           
  ---------------------------------------->
 <html lang="en">
 <head>
@@ -64,7 +64,7 @@
             </ul>
             <!--    <p align=center><img src="img/special1.gif" width=360></p> -->
             <ul data-role="listview" data-inset="true">    
-                <h2 align="center">MiU -Project 3- Right</h2>
+                <h2 align="center">ASDI 1111 - Project 1 </h2>
 		<div id="three" class="accordion">
 		    <ol>
                                 <li>
@@ -74,20 +74,6 @@
             
                                     </div>
 				</li>    
-                                <li>
-				    <h2><span class="white">MiU 1109 -Project 3- Video Review</span></h2>
-                                    <div align=center>
-                                        <iframe src="http://player.vimeo.com/video/29128936?byline=0&amp;color=73f707" height="80%" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
-                                        <h3>Enjoy Project 3 Video Review</h3>
-                                    </div>
-				</li>
-				<li>
-				    <h2><span class="green">MiU 1109 -Week 3- Discussion Vid</span></h2>
-				    <div align=center>
-                                        <iframe src="http://player.vimeo.com/video/29169448?byline=0&amp;color=73f707" height="80%" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
-                                        <h3>My Wk3 Talking Head Vid</h3>
-                                    </div>
-				</li>
 				<li>
 				    <h2><span class="recent">Recent Orders</span></h2>
 				    <div align=center class="purple">
@@ -111,8 +97,8 @@
             data-iconpos="right" data-theme="e" data-transition="flip">Browse by Distributor</a></p>
             <p><a href="#cust" data-role="button" data-icon="arrow-r"
             data-iconpos="right" data-theme="c" data-transition="flip">Customer List</a></p>
-            <p><a href="../Project4-wrong/index.html" target="_self" class="dim">Open Wrong Version</a></p>
-
+            <p><a href="#addcustomer" data-role="button" data-icon="arrow-r"
+            data-iconpos="right" data-theme="c" data-transition="flip">Add Customer-Work In Progress</a></p>
         </div>
         <div data-role="footer" data-position="fixed" data-theme="c">
             <ul id="ticker01"> <!-- news ticker -->
@@ -120,7 +106,6 @@
                 <li><span>Monthly Special:</span><a href="#">$5 Medium Stromboli</a></li>
                 <li><span>Lunch Special:</span><a href="#">$1 Off Grande Fries</a></li>
                 <li>&copy; 2011 - JMalone - All rights reserved.</li>
-
                 <!-- can add more here -->
             </ul> <!-- end of ticker -->
         </div>
@@ -285,6 +270,63 @@ Add Inventory Form Starts Here
             </ul>
         </div>
     </div>
+        <div data-role="page" id="addcustomer" data-theme="e">
+        <div data-role="header" data-position="fixed" data-theme="f">
+            <h1>Add Customer-WIP</h1>
+            <a href="#" data-rel="back" data-icon="home" class="ui-btn-left" data-theme="c">Home</a>
+            <a href="#" data-type="reset" data-icon="refresh" class="ui-btn-right" data-theme="c" onclick="window.location.reload()">Reset</a>
+
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <p class="tint" align=center><img src="img/title.png" width=50%></p>
+            </ul>
+            <form action="#" method="post" id="addcust">
+                <div data-role="fieldcontain" class="slider">
+                        <label for="cname">Cust Name</label>
+                        <input type="text" name="cname" id="cname" class="required">
+                </div>
+                <div data-role="fieldcontain" class="slider">
+                    <label for="phone">Phone #</label>
+                    <input type="tel" name="phone" id="phone" class="required">
+                </div>
+                <div data-role="fieldcontain" class="slider">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Pizza Size</legend>
+                        <input type="radio" value="Slice" name="size" id="size1" class="required">
+                            <label for="size1">Slice</label>
+                        <input type="radio" value="Small" name="size" id="size2">
+                            <label for="size2">Small</label>
+                        <input type="radio" value="Medium" name="size" id="size3" checked>
+                            <label for="size3">Medium</label>
+                        <input type="radio" value="Large" name="size" id="size4">
+                            <label for="size4">Large</label>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <h3>Pizza Toppings</h3>
+                    <fieldset class="ui-grid-a" data-role="controlgroup">
+                        <div class="ui-block-a"><input type="checkbox" value="Pepperoni" name="size" id="size1" data-theme="g">
+                            <label for="size1">Pepperoni</label></div>
+                        <div class="ui-block-b"><input type="checkbox" value="Sausage" name="size" id="size2" data-theme="g">
+                            <label for="size2">Sausage</label></div>
+                        <div class="ui-block-a"><input type="checkbox" value="Ham" name="size" id="size3" data-theme="g" checked>
+                            <label for="size3">Ham/Bacon</label></div>
+                        <div class="ui-block-b"><input type="checkbox" value="Onions" name="size" id="size4" data-theme="g">
+                            <label for="size4">Onions</label></div>
+                        <div class="ui-block-a"><input type="checkbox" value="Peppers" name="size" id="size5" data-theme="g">
+                            <label for="size5">Peppers</label></div>
+                        <div class="ui-block-b"><input type="checkbox" value="Mushrooms" name="size" id="size6" data-theme="g">
+                            <label for="size6">Mushrooms</label></div>
+                    </fieldset>
+                </div>
+        <p><label>Special instructions: <textarea name="comments" maxlength=500></textarea></label></p>
+        <p><button>Submit order</button></p>
+    </form>
     
     <!-- jQuery librariers here -->
     <script src="http://code.jquery.com/jquery-1.6.2.min.js" type="text/javascript"></script>
@@ -355,3 +397,4 @@ Add Inventory Form Starts Here
     </script>
 </body>
 </html>
+

@@ -1,3 +1,11 @@
+//--------------------------------------->
+//-- main.js
+// Author: Joseph Malone            
+// Course: Advanced SDI
+// Term  : 1111 Instructor: Rick Osborne
+// Date  : October 26, 2011           
+// ---------------------------------------->
+
 $(document).ready(function() {
     var json = {
         "orders": {
@@ -65,9 +73,6 @@ var storeInvForm = function(data){
     ];
     $.jStorage.set(key, allItems);
     alert("stored "+key+ " "+allItems);
-    //
-    //alert(mydata[0].name+" "+mydata[0].value+" "+mydata.length)
-    //;
 };
 $(document).ready(function(){
     var invform=$('#addinvform'),
@@ -91,5 +96,3 @@ $(document).ready(function(){
         }
     });
 });
-
-
