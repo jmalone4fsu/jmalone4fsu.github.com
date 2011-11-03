@@ -1,0 +1,19 @@
+{
+	"customers":[
+		{
+			"name": "Joseph Malone",
+			"address": "563 Plainview Heights",
+			"phone": "737-2232"
+		},
+		{
+			"name": "Andres Martinez",
+			"address": "1313 Cruizin Ave",
+			"phone": "636-5938"
+		},
+		{
+			"name": "Janelle Salisbury",
+			"address": "394 Hemming Way",
+			"phone": "823-0492"
+		}
+	]
+}

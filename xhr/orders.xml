@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+    <order>
+	<name>Papa J</name>
+	<addr>563 Plainview Heights</addr>
+	<phone>525-7043</phone>
+	<item>XL Pepperoni Pizza</item>
+    </order>
+    <order>
+	<name>Janelle Salisbury</name>
+	<addr>1726 Hemming Way</addr>
+	<phone>636-1836</phone>
+	<item>Large Meat Stromboli</item>
+    </order>
+    <order>
+	<name>Andres Martinez</name>
+	<addr>83 Cruizin Strip</addr>
+	<phone>329-8372</phone>
+	<item>Large Sausage Pizza</item>
+    </order>
+    <order>
+	<name>Rick Osborne</name>
+	<addr>69 Ozzy Lane</addr>
+	<phone>787-2217</phone>
+	<item>Lasagna Special</item>
+    </order>
+    <order>
+	<name>Jen Johnson</name>
+	<addr>1092 Ocean Ave</addr>
+	<phone>636-9223</phone>
+	<item>Medium Works</item>
+    </order>
+    <order>
+	<name>Carolyn Lea</name>
+	<addr>73 Dixie Terrace</addr>
+	<phone>525-0321</phone>
+	<item>Large Philly</item>
+    </order>
+</orders>
+
+

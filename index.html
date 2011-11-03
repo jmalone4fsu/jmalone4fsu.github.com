@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="papa-jq/jquery.mobile-1.0b3.css" type="text/css">
     <link rel="stylesheet" href="css/jquery.mobile.datebox.css" type="text/css">
     <link rel="stylesheet" href="css/li-scroller.css">
+    <link rel="stylesheet" href="css/csvtable.css">
     <link rel="stylesheet" href="css/liteaccordion.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -64,7 +65,7 @@
             </ul>
             <!--    <p align=center><img src="img/special1.gif" width=360></p> -->
             <ul data-role="listview" data-inset="true">    
-                <h2 align="center">ASDI 1111 - Project 1 </h2>
+                <h2 align="center">ASDI 1111 - Project 2 </h2>
 		<div id="three" class="accordion">
 		    <ol>
                                 <li>
@@ -94,11 +95,15 @@
             <p><a href="#addinventory" data-role="button" data-icon="arrow-r"
             data-iconpos="right" data-theme="c" data-transition="flip">Add Inventory</a></p>
             <p><a href="#browse" data-role="button" data-icon="arrow-r"
-            data-iconpos="right" data-theme="e" data-transition="flip">Browse by Distributor</a></p>
+            data-iconpos="right" data-theme="c" data-transition="flip">Browse by Distributor</a></p>
             <p><a href="#cust" data-role="button" data-icon="arrow-r"
             data-iconpos="right" data-theme="c" data-transition="flip">Customer List</a></p>
             <p><a href="#addcustomer" data-role="button" data-icon="arrow-r"
             data-iconpos="right" data-theme="c" data-transition="flip">Add Customer-Work In Progress</a></p>
+        
+            <p><a href="#asdi2" data-role="button" data-icon="arrow-r"
+            data-iconpos="right" data-theme="g" data-transition="flip">Press for ASDI-1111 Project 2</a></p>
+        
         </div>
         <div data-role="footer" data-position="fixed" data-theme="c">
             <ul id="ticker01"> <!-- news ticker -->
@@ -110,6 +115,35 @@
             </ul> <!-- end of ticker -->
         </div>
     </div>
+    
+    <div data-role="page" id="asdi2" data-theme="e">
+        <div data-role="header" data-position="fixed" data-theme="f">
+            <h1>ASDI-1111 Project 2</h1>
+            <a href="#" data-rel="back" data-icon="home" class="ui-btn-left" data-theme="c">Home</a>
+        </div>
+        <div data-role="content">
+            <div>
+                <ul data-role="listview" data-inset="true">
+                    <li id="mytest">
+                        <h2>Formatting Example</h2>
+                        <p>Address here</p>
+                        <p>Phone here</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="CSVTable"></div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li id="click1"><a href="#" data-icon="star">JSON</a></li>
+                    <li id="click2"><a href="#" data-icon="star">XML</a></li>
+                    <li id="click3"><a href="#" data-icon="star">CSV</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
     <div data-role="page" id="browse" data-theme="e">
         <div data-role="header" data-position="fixed" data-theme="f">
             <h1>Browse by Distributor</h1>
@@ -340,6 +374,7 @@ Add Inventory Form Starts Here
     <script src="js/jquery.li-scroller.1.0.js"></script>
     <script src="js/liteaccordion.jquery.js"></script>
     <script src="js/jquery.slidinglabels.js"></script>
+    <script src="js/jquery.csvToTable.js"></script>
     <script src="js/jstorage.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
