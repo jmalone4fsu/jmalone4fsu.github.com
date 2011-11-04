@@ -14,6 +14,16 @@
 			"name": "Janelle Salisbury",
 			"address": "394 Hemming Way",
 			"phone": "823-0492"
+		},
+		{
+			"name": "Rick Osborne",
+			"address": "69 Ozzy Drive",
+			"phone": "787-9383"
+		},
+		{
+			"name": "Bianca LaFloozy",
+			"address": "153 Cumberland Gap",
+			"phone": "329-8762"
 		}
 	]
 }
