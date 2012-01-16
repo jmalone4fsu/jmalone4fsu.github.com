@@ -1,55 +1,149 @@
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html>
-<head>
-    <title>AVF Demo</title>
-    <meta charset="utf-8">
-    <!--Mobile viewport optimized:j.imp/bplateviewport-->
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Mobile IE needs cleartype for smoothing fonts-->
-    <meta http-equiv="cleartype" content="on">
-    <style>
-        body {background-image: url(img/bg1.jpg)}
-        body { font: 14px/24px 'Helvetica Neue', Arial, sans-serif; color: green; width: 420px; margin: 20px}
-	div > h2 {color:cyan; text-shadow: 1px 1px 0px grey; border-bottom: 2px solid #333; padding-bottom: 2px }
-        div > p {color: bisque; margin:1px}
-        div.crud1 > h2 {color:deepskyblue; border-bottom: 2px solid #333; padding-bottom: 2px; margin: 30px}
-        div.crud1 > p {color:darksalmon; margin:30px}
-        a {color:green}
-    </style>
-</head>
+    <head>
+        <title>AVF-Demo Page</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+        <style>
+            #wrap{width:1024px}
+            body {margin:0;color:black; background:#073949; font-size: 100%}
+            header {background:#4B6678; width:100%; border: 1px solid black}
+            header h1,p {margin:20px; color:#00c3c3; text-shadow: 2px 1px 3px black}
+            header h2 {margin:20px}
+            nav {position:absolute; left:0; width:1024px; background:grey; border:1px solid black}
+            nav > ul {margin: 0 auto;list-style: none}
+            nav ul li {float: left}  
+            .taccel {color:cyan}
+            nav ul li a {font-weight:600;display: block; margin-right: 10%; width: 140px; font-size: 14px; line-height: 44px; text-align: center; text-shadow: 2px 1px 2px black; text-decoration: none; color:silver}
+            nav ul li a:hover {color: #fff}
+            nav ul li.selected a {color: #fff;background:dimgray}
+            h1 {color:red}
+            legend {position:absolute; left:1em; width:400px; background:#034759}
+            legend > ul { margin-left:.75em; list-style: none}
+            legend ul li {float: left}  
+            
+            legend ul li{font-weight:600;display: block; margin-left:1em;margin-bottom:1em; width: 8em; font-size: 14px; line-height: 22px; text-align: left; text-shadow: 2px 1px 2px black; text-decoration: none; color:silver}
+            legend ul li a:hover {color: #fff}
+            legend ul li.selected a {color: #fff;background:dimgray}
+            #content {}
+            article, aside {margin-top:3.5em; background: #034759; border:1px dotted grey}
+            article {margin-left: 0.75em; float: left; width: 63%; padding: 0.5em; padding-bottom:2em}
+            article img {border-radius:16px; border:3px dotted cyan; margin:1em}
+            
+            aside {display: table-cell;float:right; width: 30%; padding: 0.5em; margin-right: 0.5em}
+            aside p {color:grey}
+            aside p a {color:silver}
+            aside p a:hover {color:white}
+            h3 {margin: 1em; color: #00c3c3; text-decoration:underline}
+            /* iPad (portrait) -- */
+            @media only screen and (orientation:portrait) {
+                #wrap {width:768px}
+                nav {width:768px}
+                p {line-height:90%}
+                h2, h3, img {line-height:70%}
+                article {width:95%;margin-right:.5em}
+                aside {display:block;float:left; width: 95%; padding: 0.5em; margin:.75em}
+                aside p {color:grey;line-height:60%}
+                aside p a {color:silver}
+                aside p a:hover {color:white}
+                h3 {margin: 1em; color: #00c3c3; text-decoration:underline}
+            }
+            /* Android (portrait and landscape) -- */
+            @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+                #wrap {width:300px}
+                #mainhead header{width:100%; margin:.75em}
+                #mainhead header h1, h2 {line-height:30px}
+                nav {display:none}
+                legend {width:90%; margin-right:.75em}
+                legend ul li {width:5em}
+                figure img {width:60px}
+                p {line-height:90%}
+                h2, h3, img {line-height:70%}
+                article {width:95%;margin:.75em}
+                aside {display:block;float:left; width: 95%; padding: 0.5em; margin:.75em}
+                aside p {color:grey;line-height:60%}
+                aside p a {color:silver}
+                aside p a:hover {color:white}
+                h3 {margin: 1em; color: #00c3c3; text-decoration:underline} 
+            }
+            
+            
+        </style>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.3.0.js"></script>
+        <!-- 034769 and 003640-->
+    </head>
+    
+    <body scroll="yes">
+        <div id="wrap">
+            <div id="mainhead">
+                <header>
+                    <h1>Joseph Malone</h1>
+                    <h2>AVF Demo Page</h2>
+                </header>
+            </div>
+            <nav>
+                <ul>  
+                    <li><a href="#">About Me</a></li>  
+                    <li><a href="#">Git Hub</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>  
+            </nav>
+            <section>
+                <div class="content">
+                    
+                    <div class="mainContent">
+                        <article>
+                            <header>
+                                <h2>CRUD Apps</h2>
+                            </header>
+                            <p>Here you are presented with the original CRUD app and Updated CRUD app which will change throughout the course.</p>
+                            <figure>
+                                <a href=""><img src="images/oldcrud.jpg" width=80px alt="original crud app"></a><a href="http://papaj.iriscouch.com/addressbook/_design/addressbook/index.html"><img src="images/birthdayicon.png" width=80px alt="new crud app"></a>
+                                
+                                <legend>
+                                    <ul>
+                                        <li>Original</li>
+                                        <li>New Crud</li>
+                                    </ul>
+                                </legend>
+                            </figure>
+                            <div>
+                                </br></br>
+                                <header>
+                                    <h2>Accelerometer</h2>
+                                </header>
+                                <p><a href="test-accel.html" class="taccel">Test Accelerometer</a></p>
+                            </div>
+                            <div>
+                                </br></br>
+                                <header>
+                                    <h2>Alert</h2>
+                                </header>
+                                <p><a href="notification.html" class="taccel">Test Alert</a></p>
+                            </div>
 
-<body>
-    <div class=head1>
-        <h2>AVF Demo</h2>
-        <p>This is my launch page for my AVF app.</p>
-        <p>Content will be added as the course progresses.</p>
-    </div>
-    <div class=crud1>
-        <h2>CRUD Apps</h2>
-        <p><a href="http://papaj.iriscouch.com/addressbook/_design/addressbook/index.html"><img src="img/birthdayicon.png"></a></p>
-        <p>Original Crud</p>
-    </div>
-    <div class=crud1>
-        <h2>iOS/Android Native Feature Demo(s)</h2>
-        <p></p>
-        <p>Alert ---------- Geo ---------- Accelerometer</p>
-    </div>
-    <div class=crud1>
-        <h2>iOS or Android Native Feature Demo(s)</h2>
-        <p></p>
-        <p>Contacts ----- Camera ----- Network ----- etc</p>
-    <div>
-    <h2>Research</h2>
-    <p><a href="">Week One: Discussion Question</a></p>
-    <p><a href="">Week Two: Discussion Question</a></p>
-    <p><a href="">Week Three: Discussion Question</a></p>
-    <div class=head1>
-        <h2>Developer Info</h2>
-        <p>Name  : Joe Malone aka Papa J</p>
-        <p>Course: Advanced Visual Frameworks AFV0112</p>
-    </div>
-</body>
+                        </article>
+                    </div>
+                    <aside>
+                        <header>
+                            <h2>Research</h2>
+                        </header>
+                        <p><a href="wk1.html">Week 1 Discussion</a></p>
+                        <p><a href="wk2.html">Week 2 Discussion</a></p>
+                            <p><a href="wk3.html">Week 3 Discussion</a></p>
+                                
+                                <header class="devinfo">
+                                    <h2>Developer Info</h2>
+                                </header>
+                                <h3>Joseph Malone</h3>
+                                <p>Full Sail University</p>
+                                <p>Mobile Developement</p>
+                                <p><a href="mailto:jmalone@fullsail.edu">jmalone@fullsail.edu</a></p>
+                                </aside>
+                    
+                </div>
+            </section>
+            
+        </div>
+    </body>
+    
 </html>
